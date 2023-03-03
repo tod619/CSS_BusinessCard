@@ -25,8 +25,14 @@ body {
     height: 300px;
     background-color: #fff;
     transform-style: preserve-3d;
-    transform: rotateY(180deg);
+    border-radius: 15px;
+    box-shadow: 0 15px 60px rgba(0, 0, 0, 0.3);
     position: relative;
+    transition: transform 1s;
+}
+
+.card-wrapper:hover .card {
+    transform: rotateY(180deg);
 }
 
 .card-front,
@@ -34,6 +40,7 @@ body {
     backface-visibility: hidden;
     width: 100%;
     height: 100%;
+    border-radius: inherit;
 }
 
 .card-front {
